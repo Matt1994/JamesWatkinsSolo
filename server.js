@@ -1,10 +1,23 @@
+// BASIC REQUIRES
 var express = require("express");
+var exphbs  = require('express-handlebars');
+
+// CONFIG FILE REQUIRE
+var config = require("./config");
+
+// ROUTES REQUIRE
+var index_route = require("./routes/index");
+
+// APP INITIALISATION
 var app     = express();
+app.engine('handlebars', exphbs({defaultLayout: 'layout'}));
+app.set('view engine', 'handlebars');
+app.use(express.static('public'));
 
-app.get("/", function(req, res){
-    res.send("Hello World!");
-});
+// ROUTES SETUP
+app.use("/", index_route);
 
-app.listen(3000, function(){
-    console.log("Listening on port 3000");
+// START APP
+app.listen(config.port, function(){
+    console.log("Listening on port " + config.port);
 });
