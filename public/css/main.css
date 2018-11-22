@@ -54,8 +54,8 @@ body {
 #navbar-link-wrapper {
     position: fixed;
     top: 0;
-    right: 0;
-    width: 0;
+    right: -40%;
+    width: 40%;
     height: 100vh;
     font-size: 1.5em;
     background-color: black;
@@ -64,7 +64,7 @@ body {
 }
 
     #navbar-link-wrapper.visible {
-        width: 40%;
+        right: 0;
     }
 
 .navbar-link {
