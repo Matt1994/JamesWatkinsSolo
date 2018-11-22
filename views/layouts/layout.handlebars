@@ -2,30 +2,36 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="/css/main.css">
+        {{#each ssheet}}
+            <link rel="stylesheet" type="text/css" href={{this}} />
+        {{/each}}
         <script src="/js/jquery-3.3.1.min.js"></script>
         <script src="/js/main_scripts.js"></script>
         <script src={{page_js_loc}}></script>
     </head>
 
     <body>
-        <div id="navbar">
-            <div id="navbar-other">
-                <div id="burger-menu"></div>
-            </div>
-            <div id="navbar-link-wrapper">
-                <div class="navbar-link">Item 1</div>
-                <div class="navbar-link">Item 2</div>
-                <div class="navbar-link">Item 3</div>
-                <div class="navbar-link">Item 4</div>
-                <div class="navbar-link">Item 4</div>
-                <div class="navbar-link">Item 4</div>
-                <div class="navbar-link">Item 4</div>                                                
-            </div>
-        </div>
+        <div id="dimbg"></div>
         <div id="container">
-            {{{body}}}
+            <div id="navbar">
+                <div id="navbar-other">
+                    <div id="burger-menu"></div>
+                    <div id="brand">James Watkins</div>
+                </div>
+                <div id="navbar-link-wrapper">
+                    <div class="navbar-link">Home</div>
+                    <div class="navbar-link">Item 2</div>
+                    <div class="navbar-link">Item 3</div>
+                    <div class="navbar-link">Item 4</div>                                                
+                </div>
+            </div>
+            <div id="content">
+                {{{body}}}
+            </div>
         </div>
         
+        <div id="footer">
+            &copy; James Watkins 2018
+        </div>
     </body>
 </html> 

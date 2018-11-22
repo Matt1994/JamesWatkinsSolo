@@ -3,46 +3,76 @@
     padding: 0;
 }
 
-#container {
+body {
     background-color: rgb(22, 17, 17);
-    height: calc(100vh - 48px);
-    transition: 0.5s;
 }
+
+#dimbg {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    transition: 0.3s;
+}
+
+#dimbg.show {
+    background-color: rgba(0,0,0,0.6);
+    z-index: 1000;
+}
+
+#container {
+    min-height: 100vh;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
 
 /* NAV */
 #navbar {
-    width: 100%;
+    max-width: 100%;
     min-height: 3em;
-    display: flex;
     align-items: center;
-    background-color: black;
     color: white;
-    flex-direction: column;
-    justify-content: flex-start;
 }
 
 #burger-menu {
     background: url("/images/nav-ico.png") no-repeat center;
-    display: inline-block;
-    width: 48px;
-    height: 48px;
+    width: 3em;
+    height: 3em;
+    z-index: 1001;
 }
 
 #burger-menu:hover {
     cursor: pointer;
 }
 
-#navbar-link-wrapper {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    line-height: 3em;
+#brand {
+    padding: 0 1em;
+    font-size: 1.5em;
 }
+
+#navbar-link-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100vh;
+    font-size: 1.5em;
+    background-color: black;
+    transition: 0.3s;
+    z-index: 1001;
+}
+
+    #navbar-link-wrapper.visible {
+        width: 40%;
+    }
 
 .navbar-link {
     width: 100%;
     text-align: center;
     transition: 0.3s;
+    min-height: 3em;
+    line-height: 3em;
 }
 
 .navbar-link:hover {
@@ -56,28 +86,16 @@
     align-items: center;
 }
 
-/* MEDIA QUERIES */
-
-@media (min-width: 600px) {
-    #navbar-other {
-        display: none;
-    }
-
-    #navbar {
-        background-color: rgb(22, 17, 17);
-        flex-direction: row;
-    }
-
-    #navbar-link-wrapper {
-        display: flex;
-        flex-direction: row;
-    }
+#content {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
 }
 
-@media (min-width: 1000px) {
-    #navbar-link-wrapper {
-        width: 50%;
-        margin: 0 auto;
-        justify-content: center;
-    }
+#footer {
+    font-size: 0.8em;
+    color: white;
+    text-align: center;
+    line-height: 3em;
+    height: 3em;
 }

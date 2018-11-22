@@ -1,0 +1,17 @@
+#banner {
+    width: 100%;
+    height: 10em;
+    display: none;
+}
+
+#main_content_wrapper {
+    width: 100%;
+}
+
+#main_content {
+    margin: 1em;
+    height: 10em;
+    background-color: rgb(30, 30, 30);
+    box-shadow: 0 0 30px 5px black;
+    border-radius: 0.5em;
+}
