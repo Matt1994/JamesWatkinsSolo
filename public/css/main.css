@@ -69,15 +69,12 @@ body {
 
 #navbar-other {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   justify-content: space-between;
   align-items: center; }
 
 #content {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  display: flex;
   flex-wrap: wrap; 
   margin: 0 auto; 
   max-width: 1200px; }
