@@ -1,0 +1,13 @@
+{
+    "name": "James Watkins Solo",
+    "short_name": "JWS",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#fff",
+    "description": "James Watkins Solo",
+    "icons": [{
+      "src": "images/touch/homescreen48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    }]
+  }

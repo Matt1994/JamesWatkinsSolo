@@ -11,8 +11,7 @@
   margin: 1em;
   min-height: 15em;
   background-color: #1e1e1e;
-  -webkit-box-shadow: 0 0 30px 5px black;
-          box-shadow: 0 0 30px 5px black;
+  box-shadow: 0 0 30px 5px black;
   border-radius: 0.5em;
   padding: 1em;
 }
