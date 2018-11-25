@@ -2,104 +2,90 @@
   margin: 0;
   padding: 0; }
 
-body {
-  background-color: #161111; }
-
-#dimbg {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1; 
-  transition: 0.5s background-color; }
-
-#dimbg.visible {
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: 1000; }
-
-#container {
-  min-height: 100vh;
-  margin: 0 auto; }
+.container {
+  background-color: #161111;
+  min-height: 100vh; }
 
 /* NAV */
-#navbar {
+.navbar {
   display: flex;
-  max-width: 100%;
-  min-height: 3em;
-  align-items: center;
+  width: 100%;
   color: white; 
-  background-color: black;}
+  background-color: #000000;
+  font-size: 1.5em;
+  line-height: 2em;}
 
-#burger-menu {
+.burger-menu {
   background: url("/images/nav-ico.png") no-repeat center;
-  width: 3em;
-  height: 3em;
-  z-index: 1001; }
+  width: 2em;
+  height: 2em;
+  z-index: 1000; }
 
-#burger-menu:hover {
+.burger-menu:hover {
   cursor: pointer; }
 
-#brand {
-  padding: 0 1em;
-  font-size: 1.5em; }
+.brand {
+  padding: 0 1em; }
 
-#navbar-link-wrapper {
-  position: fixed;
-  top: 0;
-  right: -40%;
+.navbar-link-wrapper {
+  position: absolute;
+  top: 2em;
   width: 40%;
-  height: 100vh;
-  font-size: 1.5em;
-  background-color: black;
-  z-index: 1001; 
-  transition: 0.5s right}
+  z-index: 1000; 
+  transition: 0.5s left;
+  display: none;
+  flex-direction: column;
+  background-color: inherit;
+  box-shadow: 0 0 30px 5px black; }
 
-#navbar-link-wrapper.visible {
-  right: 0; }
+.navbar-link-wrapper.visible {
+  display: flex; }
 
 .navbar-link {
-  width: 100%;
-  text-align: center;
-  min-height: 3em;
-  line-height: 3em; 
-  transition: 0.3s color}
+  text-align: center; 
+  transition: 0.5s color; }
 
 .navbar-link:hover {
   cursor: pointer;
   color: darkgray; }
 
-#navbar-other {
+.navbar-other {
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: center; }
+  justify-content: space-between; }
 
-#content {
+/* CONTENT */
+
+.content {
   display: flex;
   flex-wrap: wrap; 
   margin: 0 auto; 
   max-width: 1200px; }
 
-#footer {
+/* FOOTER */
+
+.footer {
   font-size: 0.8em;
   color: white;
   text-align: center;
-  line-height: 3em;
-  height: 3em; }
+  line-height: 2em; }
+
+/* MEDIA QUERIES */
 
 @media (min-width: 768px){
-  #navbar-other {
+  .navbar-other {
     display: none;
   }
 
-  #navbar-link-wrapper {
+  .navbar-link-wrapper {
     position: initial;
-    height: auto;
     display: flex;
     width: 100%;
+    flex-direction: row;
+    box-shadow: none;
   }
 
   .navbar-link {
-    min-height: initial;
-    line-height: initial;
+    width: 100%;
   }
 }

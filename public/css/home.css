@@ -1,13 +1,13 @@
-#banner {
+.banner {
   width: 100%;
   height: 15em;
 }
 
-#content_wrapper {
+.content_wrapper {
   width: 100%;
 }
 
-#main_content {
+.main_content {
   margin: 1em;
   min-height: 15em;
   background-color: #1e1e1e;
@@ -17,13 +17,13 @@
 }
 
 @media (min-width: 550px) {
-  #banner {
+  .banner {
     height: 20em;
   }
 }
 
 @media (min-width: 768px) {
-  #banner {
+  .banner {
     height: 25em;
   }
 
